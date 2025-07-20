@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们的恋爱时光 | 一周年纪念</title>
+    <!-- 引入外部资源 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 引入本地CSS -->
+    <link rel="stylesheet" href="/hh/styles.css">
+</head>
+<body>
+    <!-- 音乐通知 -->
+    <div class="music-notice">
+        <i class="fas fa-music"></i>
+        <span>背景音乐已自动播放</span>
+    </div>
+    
+    <!-- 照片弹窗 -->
+    <div class="photo-modal">
+        <div class="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-content">
+            <img src="" alt="大图">
+        </div>
+    </div>
+    
+    <!-- 音乐播放器 -->
+    <div class="music-player">
+        <div class="play-btn">
+            <i class="fas fa-pause"></i>
+        </div>
+        <div class="player-info">
+            <h4>蝴蝶</h4>
+            <p>陶喆</p>
+        </div>
+    </div>
+    
+    <!-- 背景音乐 -->
+    <audio id="bg-music" loop>
+        <source src="/hh/陶喆 - 蝴蝶.mp3" type="audio/mpeg">
+        您的浏览器不支持音频元素。
+    </audio>
+    
+    <div class="container">
+        <!-- 封面部分 -->
+        <section class="cover">
+            <h1>我们的恋爱时光</h1>
+            <h2>黄心怡 & 韩文豪</h2>
+            
+            <!-- 计时器 -->
+            <div class="love-timer">
+                <div class="timer-title">我们相爱了：</div>
+                <div class="timer-container">
+                    <div class="timer-unit">
+                        <div id="days" class="timer-value">0</div>
+                        <div class="timer-label">天</div>
+                    </div>
+                    <div class="timer-unit">
+                        <div id="hours" class="timer-value">0</div>
+                        <div class="timer-label">小时</div>
+                    </div>
+                    <div class="timer-unit">
+                        <div id="minutes" class="timer-value">0</div>
+                        <div class="timer-label">分钟</div>
+                    </div>
+                    <div class="timer-unit">
+                        <div id="seconds" class="timer-value">0</div>
+                        <div class="timer-label">秒</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="heart-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <p>2024.7.28-2025.7.28<br>从初遇到相知，365天的点点滴滴<br>记录我们共同走过的美好旅程</p>
+            <div class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+        
+        <!-- 时间轴部分 -->
+        <!-- 时间轴部分 -->
+        <section class="timeline">
+            <!-- 时间轴项 1 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="date">
+                        <i class="far fa-calendar-alt"></i> 2024年7月18日
+                    </div>
+                    <h3>初次相遇</h3>
+                    <p>那个夏天的午后,我第一次来到你的城市。</p>
+                    <div class="photo-grid">
+                        <img src="https://p.sda1.dev/25/bf4808e07c19badde92296ecb279ffd0/11.png" alt="初次相遇">
+                        <img src="https://p.sda1.dev/25/6f5858074383dff50654546b112db067/12.png" alt="第一次约会">
+                    </div>
+                    <div class="memory-text">
+                        "你的笑容像夏日的阳光,瞬间融化了我的心。"
+                    </div>
+                </div>
+            </div>
+            
+         <!-- 时间轴项 2 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="date">
+                        <i class="far fa-calendar-alt"></i> 2024年7月28日
+                    </div>
+                    <h3>爱的表白</h3>
+                    <p>在我的城市,我向你表白,戴上了亲手制作的爱的对戒。</p>
+                    <div class="photo-grid">
+                        <img src="https://p.sda1.dev/25/bcbe9c13e8b4246c55da9f3fef13de7d/21.png" alt="圣诞节">
+                        <img src="https://p.sda1.dev/25/767f7458d5bc2ebf00c203a133e8f0d3/22.png" alt="圣诞礼物">
+                    </div>
+                    <div class="memory-text">
+                        "因为你的到来,家乡有了不一样的意义。"
+                    </div>
+                </div>
+            </div>
+
+            <!-- 时间轴项 3 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="date">
+                        <i class="far fa-calendar-alt"></i> 2024年12月28日
+                    </div>
+                    <h3>第一次出国旅行</h3>
+                    <p>我们一起去亚庇,看日出日落,体验截然不同的生活。</p>
+                    <div class="photo-grid">
+                        <img src="https://p.sda1.dev/25/f0bf32304318df8b4df7c665aacf7e9f/31.png" alt="海边旅行">
+                        <img src="https://p.sda1.dev/25/746055c686d66963dc70857aac92d84b/32.png" alt="沙滩">
+                    </div>
+                    <div class="memory-text">
+                        "在异国他乡跨过2024,迎来我们新的一年"
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 时间轴项 4 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="date">
+                        <i class="far fa-calendar-alt"></i> 2025年2月3日
+                    </div>
+                    <h3>春节度假</h3>
+                    <p>在大洪山脚下,我们一起燃放了新年的烟花。</p>
+                    <div class="photo-grid">
+                        <img src="https://p.sda1.dev/25/61c935fdfbb3ab2974f8c5884e9f85e6/41.png" alt="情人节玫瑰">
+                        <img src="https://p.sda1.dev/25/8923553d335291e34e79f7e7be1ee341/42.png" alt="视频通话">
+                    </div>
+                    <div class="memory-text">
+                        "夜晚摇椅上,你靠着我的时候我是如此的满足与幸福。"
+                    </div>
+                </div>
+            </div>
+
+            <!-- 时间轴项 6 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="date">
+                        <i class="far fa-calendar-alt"></i> 2025年2月28日
+                    </div>
+                    <h3>春日踏青</h3>
+                    <p>在迪士尼中漫步，捕捉春天的气息，定格我们的美好瞬间。</p>
+                    <div class="photo-grid">
+                        <img src="https://p.sda1.dev/25/4d60d2cb6dd8537b6956b4dbb173fc01/51.png" alt="春日踏青">
+                        <img src="https://p.sda1.dev/25/a0310aff5520ef48e84f7550cdc05f67/52.png" alt="花海">
+                    </div>
+                    <div class="memory-text">
+                        "带心爱的女孩进入了城堡,你的陪伴才让迪士尼有了意义。"
+                    </div>
+                </div>
+            </div>
+
+            <!-- 时间轴项 5 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="date">
+                        <i class="far fa-calendar-alt"></i> 2025年4月9日
+                    </div>
+                    <h3>第一次一起过生日</h3>
+                    <p>我为你准备的生日惊喜，看到你感动的泪水，我知道这一切都值得。</p>
+                    <div class="photo-grid">
+                        <img src="https://p.sda1.dev/25/8385979a4b5cee96a7bac492d716b3e4/61.png" alt="生日派对">
+                        <img src="https://p.sda1.dev/25/88a85943945d40dee6ee8242a0720fa8/62.png" alt="生日蛋糕">
+                    </div>
+                    <div class="memory-text">
+                        "你的笑容是我最好的生日礼物，愿每年都能为你庆祝。"
+                    </div>
+                </div>
+            </div>
+            
+
+             <!-- 时间轴项 7 -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="date">
+                        <i class="far fa-calendar-alt"></i> 2024年5月1日
+                    </div>
+                    <h3>泰国之行</h3>
+                    <p>和你骑行在清迈的街头,与你漫步在曼谷的午后</p>
+                    <div class="photo-grid">
+                        <img src="https://p.sda1.dev/25/138df8ae89e28dd5f321ed8593e4a766/71.png" alt="春日踏青">
+                        <img src="https://p.sda1.dev/25/3f93394a0a2233d5347c96eadcff6043/72.png" alt="花海">
+                    </div>
+                    <div class="memory-text">
+                        "我们一起在世界留下更多足迹"
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 页脚部分 -->
+        <section class="footer">
+            <h2>一周年快乐！</h2>
+            <p class="love-quote">"我们的这一年丰富又精彩<br>365天，8760小时，525600分钟，每一刻都因为有你而变得特别。"</p>
+            <div class="future-plans">
+                <div class="plan-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>更多旅行</h3>
+                    <p>探索世界的每个角落</p>
+                </div>
+                <div class="plan-card">
+                    <i class="fas fa-home"></i>
+                    <h3>共同的家</h3>
+                    <p>打造属于我们的空间</p>
+                </div>
+                <div class="plan-card">
+                    <i class="fas fa-ring"></i>
+                    <h3>永远在一起</h3>
+                    <p>未来每一步都有彼此</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- 引入本地JS -->
+    <script src="/hh/script.js"></script>
+</body>
+</html>
