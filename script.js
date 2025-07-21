@@ -43,11 +43,11 @@ playIcon.classList.add('fa-play');
 
 // 核心：点击初始封面后触发的逻辑
 initialCover.addEventListener('click', function() {
-    // 1. 隐藏初始封面（添加渐变消失效果）
+    // 1. 隐藏初始封面
     initialCover.style.opacity = '0';
     setTimeout(() => {
         initialCover.style.visibility = 'hidden';
-    }, 1000); // 与CSS动画时长一致
+    }, 1000);
     
     // 2. 显示原有内容（添加渐显效果）
     container.classList.remove('hidden');
