@@ -603,7 +603,7 @@ body {
     }
     
     .timer-value {
-        font-size:1rem;
+        font-size:1.1rem;
         padding: 8px 12px;
     }
     
@@ -643,11 +643,11 @@ body {
     }
     
     .timer-unit {
-        min-width: 60px;
+        min-width: 45px;
     }
     
     .timer-value {
-        font-size: 1rem;
+        font-size: 1.1rem;
         padding: 6px 8px;
     }
     
