@@ -11,42 +11,38 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* 占满整个屏幕高度 */
-    background: linear-gradient(135deg, #ffebee 0%, #f8bbd0 100%); /* 原封面粉色渐变 */
+    height: 100vh;
+    background: linear-gradient(135deg, #ffebee 0%, #f8bbd0 100%);
     z-index: 9999;
     transition: opacity 1s ease, visibility 1s;
-    
-    /* 关键：通过 Flex 布局让子元素居中 */
     display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
+    justify-content: center;
+    align-items: center;
 }
 
-.initial-content {
-    /* 文字样式优化（可选，增强居中视觉效果） */
-    text-align: center; /* 确保文字本身换行后仍居中 */
-    padding: 0 20px; /* 避免边缘屏幕文字贴边 */
+/* 红心样式 - 核心新增 */
+.heart-icon-initial {
+    font-size: 8rem; /* 大尺寸红心 */
+    color: #e91e63; /* 红色系 */
+    animation: heartbeat 1.5s infinite; /* 跳动动画 */
+    cursor: pointer; /* 鼠标悬停显示手型 */
+    transition: transform 0.3s ease;
 }
 
-.initial-content p {
-    font-size: 2rem; /* 文字大小（可根据需要调整） */
-    color: #7b1fa2; /* 主题色，与页面风格统一 */
-    font-weight: 600;
-    line-height: 1.5; /* 调整行间距，避免两行文字太挤 */
-    margin: 0; /* 清除默认外边距，避免偏移 */
-    animation: bounce 2s infinite; /* 保留原有跳动动画 */
+.heart-icon-initial:hover {
+    transform: scale(1.1); /* hover放大效果 */
 }
 
-/* 响应式调整（适配手机屏幕，避免文字过大导致偏移） */
+/* 响应式调整红心大小 */
 @media (max-width: 768px) {
-    .initial-content p {
-        font-size: 1.6rem; /* 手机上缩小字体，确保完整显示 */
+    .heart-icon-initial {
+        font-size: 6rem;
     }
 }
 
 @media (max-width: 480px) {
-    .initial-content p {
-        font-size: 1.4rem; /* 小屏手机进一步缩小 */
+    .heart-icon-initial {
+        font-size: 5rem;
     }
 }
 
@@ -603,7 +599,7 @@ body {
     }
     
     .timer-value {
-        font-size:1.1rem;
+        font-size:1rem;
         padding: 8px 12px;
     }
     
@@ -643,11 +639,11 @@ body {
     }
     
     .timer-unit {
-        min-width: 45px;
+        min-width: 50px;
     }
     
     .timer-value {
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding: 6px 8px;
     }
     
