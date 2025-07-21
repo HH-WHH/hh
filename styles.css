@@ -4,33 +4,50 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* 新增：初始引导封面样式 */
+
+/* 初始引导封面（点击前显示） */
 .initial-cover {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    /* 原封面渐变粉色（与body背景呼应） */
-    background: linear-gradient(135deg, #ffebee 0%, #f8bbd0 100%);
+    height: 100vh; /* 占满整个屏幕高度 */
+    background: linear-gradient(135deg, #ffebee 0%, #f8bbd0 100%); /* 原封面粉色渐变 */
+    z-index: 9999;
+    transition: opacity 1s ease, visibility 1s;
+    
+    /* 关键：通过 Flex 布局让子元素居中 */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* 最顶层显示 */
-    transition: opacity 1s ease, visibility 1s; /* 消失动画 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
 }
 
 .initial-content {
-    text-align: center;
-    padding: 20px;
+    /* 文字样式优化（可选，增强居中视觉效果） */
+    text-align: center; /* 确保文字本身换行后仍居中 */
+    padding: 0 20px; /* 避免边缘屏幕文字贴边 */
 }
 
 .initial-content p {
-    font-size: 2rem;
-    color: #7b1fa2; /* 主题色 */
+    font-size: 2rem; /* 文字大小（可根据需要调整） */
+    color: #7b1fa2; /* 主题色，与页面风格统一 */
     font-weight: 600;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-    animation: bounce 2s infinite; /* 提示文字跳动动画 */
+    line-height: 1.5; /* 调整行间距，避免两行文字太挤 */
+    margin: 0; /* 清除默认外边距，避免偏移 */
+    animation: bounce 2s infinite; /* 保留原有跳动动画 */
+}
+
+/* 响应式调整（适配手机屏幕，避免文字过大导致偏移） */
+@media (max-width: 768px) {
+    .initial-content p {
+        font-size: 1.6rem; /* 手机上缩小字体，确保完整显示 */
+    }
+}
+
+@media (max-width: 480px) {
+    .initial-content p {
+        font-size: 1.4rem; /* 小屏手机进一步缩小 */
+    }
 }
 
 /* 新增：初始隐藏原有内容 */
@@ -50,6 +67,7 @@
 .music-notice {
     display: none; /* 初始不显示 */
 }
+
 body {
     background: linear-gradient(135deg, #ffebee 0%, #f8bbd0 100%);
     color: #5a3d5c;
@@ -144,11 +162,11 @@ body {
 }
 
 .timer-value {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #e91e63;
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px 15px;
     width: 100%;
     text-align: center;
@@ -179,22 +197,6 @@ body {
     color: #7b1fa2;
     animation: bounce 2s infinite;
     animation: fadeInUp 1.5s ease 1.1s both;
-}
-
-@media (max-width: 480px) {
-  .love-timer {
-        padding: 10px;
-    }
-  .timer-unit {
-        min-width: 25px;
-    }
-  .timer-value {
-        font-size: 1rem;
-        padding: 4px 6px;
-    }
-  .timer-label {
-        font-size: 0.7rem;
-    }
 }
 
 /* 时间轴部分 */
@@ -272,7 +274,7 @@ body {
 .date {
     color: #e91e63;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -597,11 +599,11 @@ body {
     }
     
     .timer-unit {
-        min-width: 70px;
+        min-width: 50px;
     }
     
     .timer-value {
-        font-size: 2rem;
+        font-size:1rem;
         padding: 8px 12px;
     }
     
@@ -637,7 +639,7 @@ body {
 
 @media (max-width: 480px) {
     .timer-container {
-        gap: 8px;
+        gap: 3px;
     }
     
     .timer-unit {
@@ -645,7 +647,7 @@ body {
     }
     
     .timer-value {
-        font-size: 1.6rem;
+        font-size: 1rem;
         padding: 6px 8px;
     }
     
